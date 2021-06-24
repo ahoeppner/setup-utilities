@@ -6,3 +6,9 @@ This script will populate the 'authorized_keys' file on a server with the entrie
 ```
 curl -s https://raw.githubusercontent.com/ahoeppner/setup-utilities/main/keys-setup.sh | sudo bash
 ```
+
+## siegward-setup
+This script will create the standard siegward user on a server, give them root, and ask you to setup a password.
+```
+curl -s https://raw.githubusercontent.com/ahoeppner/setup-utilities/main/siegward-setup.sh | sudo bash
+```
