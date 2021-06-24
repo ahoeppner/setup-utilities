@@ -6,15 +6,15 @@ USERHOME="/home/$USER"
 
 # Require script to be run via sudo, but not as root
 if [[ $EUID -ne 0 ]]; then
-    echo "Script must be run with root privilages!"
-    exit 1
+  echo "Script must be run with root privilages!"
+  exit 1
 fi
 
 # Add and configure siegward user access
 if getent passwd $USER > /dev/null; then
-	echo "Siegward already exists...Skipping"
+  echo "Siegward already exists...Skipping"
 else
-	echo -n "Adding Siegward User..."
+  echo -n "Adding Siegward User..."
 	useradd -m -d $USERHOME $USER
   usermod -aG sudo $USER
   passwd $USER. # manually set password for user account as final step
