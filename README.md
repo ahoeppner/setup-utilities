@@ -5,5 +5,5 @@ keys-setup
 ==========
 This script will populate the 'authorized_keys' file on a server with the entries in this repository. To run this script, use the following command (with sudo):
 ```
-curl -s https://raw.githubusercontent.com/rax-brazil/pub-ssh-keys/master/rackerkeys.sh | bash
+curl -s https://raw.githubusercontent.com/ahoeppner/setup-utilities/main/keys-setup.sh | bash
 ```
