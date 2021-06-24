@@ -15,9 +15,9 @@ if getent passwd $USER > /dev/null; then
   echo "Siegward already exists...Skipping"
 else
   echo -n "Adding Siegward User..."
-	useradd -m -d $USERHOME $USER
+  useradd -m -d $USERHOME $USER
   usermod -aG sudo $USER
   passwd $USER. # manually set password for user account as final step
   echo
-	echo "Done"
+  echo "Done"
 fi
