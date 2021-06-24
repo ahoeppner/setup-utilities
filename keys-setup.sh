@@ -35,4 +35,4 @@ echo "Key setup complete."
 
 printf "\nDon't forget to setup dotfiles (one-liner):\n"
 echo "git clone https://github.com/ahoeppner/dotfiles.git && cd dotfiles && ./install.sh"
-echo ""
+echo
