@@ -12,12 +12,12 @@ fi
 
 # Add and configure siegward user access
 if getent passwd $USER > /dev/null; then
-  echo "Siegward already exists...Skipping"
+  echo "$USER already exists...Skipping"
 else
-  echo -n "Adding Siegward User..."
+  echo "Adding $USER..."
   useradd -m -d $USERHOME $USER
   usermod -aG sudo $USER
-  passwd $USER. # manually set password for user account as final step
+  passwd $USER # manually set password for user account as final step
   echo
   echo "Done"
 fi
