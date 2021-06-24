@@ -3,7 +3,7 @@
 # Variables
 USER="siegward"
 HOMEDIR="/home/$USER"
-SSHDIR="$HOMEDIR/authorized_keys"
+SSHDIR="$HOMEDIR/.ssh"
 REPO="https://raw.githubusercontent.com/ahoeppner/setup-utilities/main"
 KEYS="$REPO/authorized_keys"
 
