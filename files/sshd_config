@@ -115,15 +115,16 @@ AcceptEnv LANG LC_*
 # override default of no subsystems
 Subsystem sftp	/usr/lib/openssh/sftp-server
 
+# Allow for use of certificate based authentication
+HostCertificate /etc/ssh/ssh_host_rsa_key-cert.pub
+TrustedUserCAKeys /etc/ssh/ca.pub
+# Uncomment the line below if principals are to be used,
+# otherwise account names must be specified on the cert.
+# AuthorizedPrincipalsFile /etc/ssh/auth_principals/%u
+
 # Example of overriding settings on a per-user basis
 #Match User anoncvs
 #	X11Forwarding no
 #	AllowTcpForwarding no
 #	PermitTTY no
 #	ForceCommand cvs server
-
-# Allow for use of certificate based authentication
-HostCertificate /etc/ssh/ssh_host_rsa_key-cert.pub
-TrustedUserCAKeys /etc/ssh/ca.pub
-# Uncomment the line below if principals are to be used. Otherwise account names must be specified on the cert.
-# AuthorizedPrincipalsFile /etc/ssh/auth_principals/%u

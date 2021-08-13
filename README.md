@@ -1,2 +1,2 @@
 # setup-utilities
-Some common actions needed when setting up a server for the first time.
+Some common actions and files needed when setting up a server for the first time.
