@@ -8,7 +8,7 @@ fi
 
 # Download public certificate and additionally add it as a trusted ca in global known hosts
 curl -s https://raw.githubusercontent.com/ahoeppner/setup-utilities/main/files/ca.pub > /etc/ssh/ca.pub
-echo @cert-authority *.home $(cat /etc/ssh/ca.pub) > /etc/ssh/ssh_known_hosts
+echo @cert-authority *.servers.hwlocal.net $(cat /etc/ssh/ca.pub) > /etc/ssh/ssh_known_hosts
 echo 'Public CA added...'
 
 # Download modified sshd_config
@@ -18,12 +18,12 @@ echo 'sshd_config updated...'
 # Copy the rsa public key to ssh-ca for signing
 cd /etc/ssh
 echo "Copying rsa public key to ssh-ca for signing..."
-scp -q /etc/ssh/ssh_host_rsa_key.pub helper@ssh-ca.home:/home/helper/$HOSTNAME.pub
+scp -q /etc/ssh/ssh_host_rsa_key.pub helper@ssh-ca.servers.hwlocal.net:/home/helper/$HOSTNAME.pub
 echo -e "\nlog onto CA and sign key, then return here to retrieve it with by pressing [ENTER]..."
 read  # this command waits for a newline character before proceeding
 
 # wait for user input and then pull cert back
-scp -q helper@ssh-ca.home:/home/helper/$HOSTNAME-cert.pub /etc/ssh/ssh_host_rsa_key-cert.pub
+scp -q helper@ssh-ca.servers.hwlocal.net:/home/helper/$HOSTNAME-cert.pub /etc/ssh/ssh_host_rsa_key-cert.pub
 
 # Restart SSHD to pull in new config
 echo "Restarting SSHD..."
