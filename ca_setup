@@ -12,6 +12,7 @@ echo @cert-authority *.servers.hwlocal.net $(cat /etc/ssh/ca.pub) > /etc/ssh/ssh
 echo 'Public CA added...'
 
 # Download modified sshd_config
+cp /etc/ssh/sshd_config /etc/ssh/sshd_config.backup
 curl -s https://raw.githubusercontent.com/ahoeppner/setup-utilities/main/files/sshd_config > /etc/ssh/sshd_config
 echo 'sshd_config updated...'
 
