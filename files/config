@@ -67,4 +67,5 @@ User            root
 Host            hifi
 HostName        hifiberry.trust.hwlocal.net
 Port            22
+IdentityFile    ~/.ssh/id_rsa
 User            root
