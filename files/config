@@ -1,0 +1,70 @@
+Host            pve
+HostName        pve.admin.hwlocal.net
+Port            22
+IdentityFile    ~/.ssh/id_rsa
+User	          siegward
+
+Host            bonfire
+HostName        bonfire.servers.hwlocal.net
+Port            22
+IdentityFile    ~/.ssh/id_rsa
+User            siegward
+
+Host            grandarchives
+HostName        grandarchives.servers.hwlocal.net
+Port            22
+IdentityFile    ~/.ssh/id_rsa
+User            siegward
+
+Host            plex
+HostName        plex.trust.hwlocal.net
+Port            22
+IdentityFile    ~/.ssh/id_rsa
+User            siegward
+
+Host            firelink
+HostName        firelink.servers.hwlocal.net
+Port            22
+IdentityFile    ~/.ssh/id_rsa
+User            siegward
+
+Host            wg-1
+HostName        wg-1.vpn.hwlocal.net
+Port            22
+IdentityFile    ~/.ssh/id_rsa
+User            siegward
+
+Host            ssh-ca
+HostName        ssh-ca.servers.hwlocal.net
+Port            22
+IdentityFile    ~/.ssh/id_rsa
+User            root
+
+Host            pihole
+HostName        pihole.servers.hwlocal.net
+Port            22
+IdentityFile    ~/.ssh/id_rsa
+User            siegward
+
+Host            unifi
+HostName        unifi.admin.hwlocal.net
+Port            22
+IdentityFile    ~/.ssh/id_rsa
+User            siegward
+
+Host            octoprint
+HostName        octoprint.servers.hwlocal.net
+Port            22
+IdentityFile    ~/.ssh/id_rsa
+User            siegward
+
+Host            comma-2
+HostName        comma-2.untrust.hwlocal.net
+Port            22
+IdentityFile    ~/.ssh/id_ed25519
+User            root
+
+Host            hifi
+HostName        hifiberry.trust.hwlocal.net
+Port            22
+User            root
