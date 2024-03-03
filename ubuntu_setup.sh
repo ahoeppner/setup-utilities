@@ -23,13 +23,9 @@ fi
 
 log "Internet connectivity confirmed."
 
-# Update and upgrade packages
-log "Updating and upgrading packages."
-apt-get update && apt-get upgrade -y || { log "Failed to update/upgrade. Please check your package manager settings."; exit 1; }
-
 # Install utilities
 log "Installing necessary utilities."
-apt-get install -y curl git vim htop ufw unattended-upgrades || { log "Failed to install necessary utilities."; exit 1; }
+apt-get install -y git vim htop ufw unattended-upgrades || { log "Failed to install necessary utilities."; exit 1; }
 
 ##########################
 # Setup user
