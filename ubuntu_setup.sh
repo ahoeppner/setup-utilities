@@ -15,14 +15,6 @@ if [ "$(id -u)" != "0" ]; then
     exit 1
 fi
 
-# Validate internet connectivity before proceeding with the script.
-if ! ping -c 1 google.com &> /dev/null; then
-    log "Internet connection is required. Please check your connectivity."
-    exit 1
-fi
-
-log "Internet connectivity confirmed."
-
 # Install utilities
 log "Installing necessary utilities."
 apt-get install -y git vim htop ufw unattended-upgrades || { log "Failed to install necessary utilities."; exit 1; }
