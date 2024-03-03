@@ -26,6 +26,7 @@ The `ubuntu_setup.sh` script carries out the following main tasks:
 
 - A running Ubuntu system.
 - Root access to the system.
+- Internet access (obviously)
 
 Before the script will work, you must update / upgrade the system and install curl. You can do this with: 
 ```bash
