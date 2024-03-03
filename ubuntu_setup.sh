@@ -84,6 +84,15 @@ show_firewall_rules() {
     ufw status numbered
 }
 
+# Disable IPv6 in UFW
+echo "Disabling IPv6 in UFW..."
+sed -i 's/IPV6=yes/IPV6=no/' /etc/default/ufw
+log "IPv6 disabled in UFW configuration."
+
+# Reload UFW to apply changes
+ufw reload
+log "UFW reloaded with IPv6 disabled."
+
 # Introduce a UFW firewall setup with sensible defaults. Allow ssh by default.
 ufw allow ssh
 log "Setting up UFW - port 22 (ssh) enabled."
