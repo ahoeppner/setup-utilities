@@ -147,3 +147,8 @@ sudo -u $USERNAME bash "$REPOS_DIR/dotfiles_bash/install.sh" || { log "Failed to
 log "dotfiles_bash installation script executed."
 
 log "Setup script completed."
+
+echo
+echo "The system will reboot in 5 seconds..."
+sleep 5
+reboot
