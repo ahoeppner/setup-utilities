@@ -106,7 +106,16 @@ ufw enable
 
 # Prompt for setting up time zone and locale settings
 dpkg-reconfigure tzdata
-dpkg-reconfigure locales
+
+# Ensure the en_US.UTF-8 locale is generated
+if ! grep -q "^en_US.UTF-8" /etc/locale.gen; then
+    echo "en_US.UTF-8 UTF-8" | tee -a /etc/locale.gen
+    locale-gen
+fi
+
+# Set the en_US.UTF-8 locale as the default
+update-locale LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
+log "Locale set to en_US.UTF-8 successfully."
 
 log "Configuring automatic security updates to automatically install security patches."
 # Configure automatic security updates
@@ -133,7 +142,7 @@ chown -R $USERNAME:$USERNAME "$REPOS_DIR/dotfiles_bash"
 log "dotfiles_bash repository cloned."
 
 # Run install.sh
-cd $USER_HOME
+cd $REPOS_DIR/dotfiles_bash
 sudo -u $USERNAME bash "$REPOS_DIR/dotfiles_bash/install.sh" || { log "Failed to run install.sh from dotfiles_bash."; exit 1; }
 log "dotfiles_bash installation script executed."
 
