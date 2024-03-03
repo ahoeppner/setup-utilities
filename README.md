@@ -35,8 +35,11 @@ apt-get update && apt-get upgrade -y && apt-get install curl -y
 
 ### How to Run the Script
 
-To run the script you can use the following command (as root):
+To run the script, download it and run with bash.
 
 ```bash
-curl -s https://raw.githubusercontent.com/ahoeppner/setup-utilities/main/ubuntu_setup.sh | bash
+curl https://raw.githubusercontent.com/ahoeppner/setup-utilities/main/ubuntu_setup.sh 
+chmod +x ubuntu_setup.sh
+./ubuntu_setup.sh
 ```
+
