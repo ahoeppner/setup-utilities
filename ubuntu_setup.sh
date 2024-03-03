@@ -88,6 +88,8 @@ show_firewall_rules() {
 ufw allow ssh
 log "Setting up UFW - port 22 (ssh) enabled."
 
+ufw enable
+
 # Prompt for additional ports
 while true; do
     show_firewall_rules
@@ -101,8 +103,6 @@ while true; do
         * ) log "Please answer yes or no.";;
     esac
 done
-
-ufw enable
 
 # Prompt for setting up time zone and locale settings
 dpkg-reconfigure tzdata
