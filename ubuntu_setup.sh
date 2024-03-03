@@ -15,9 +15,13 @@ if [ "$(id -u)" != "0" ]; then
     exit 1
 fi
 
+# Update and upgrade packages
+log "Updating and upgrading packages."
+apt-get update && apt-get upgrade -y || { log "Failed to update/upgrade. Please check your package manager settings."; exit 1; }
+
 # Install utilities
 log "Installing necessary utilities."
-apt-get install -y git vim htop ufw unattended-upgrades || { log "Failed to install necessary utilities."; exit 1; }
+apt-get install -y git curl vim htop ufw unattended-upgrades || { log "Failed to install necessary utilities."; exit 1; }
 
 ##########################
 # Setup user
@@ -129,6 +133,7 @@ chown -R $USERNAME:$USERNAME "$REPOS_DIR/dotfiles_bash"
 log "dotfiles_bash repository cloned."
 
 # Run install.sh
+cd $USER_HOME
 sudo -u $USERNAME bash "$REPOS_DIR/dotfiles_bash/install.sh" || { log "Failed to run install.sh from dotfiles_bash."; exit 1; }
 log "dotfiles_bash installation script executed."
 
