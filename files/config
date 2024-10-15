@@ -1,71 +1,101 @@
-Host            pve
-HostName        pve.admin.hwlocal.net
-Port            22
-IdentityFile    ~/.ssh/id_rsa
-User	          siegward
-
-Host            bonfire
-HostName        bonfire.servers.hwlocal.net
-Port            22
-IdentityFile    ~/.ssh/id_rsa
-User            siegward
-
-Host            grandarchives
-HostName        grandarchives.servers.hwlocal.net
-Port            22
-IdentityFile    ~/.ssh/id_rsa
-User            siegward
-
-Host            plex
-HostName        plex.trust.hwlocal.net
-Port            22
-IdentityFile    ~/.ssh/id_rsa
-User            siegward
-
-Host            firelink
-HostName        firelink.servers.hwlocal.net
-Port            22
-IdentityFile    ~/.ssh/id_rsa
-User            siegward
-
-Host            wg-1
-HostName        wg-1.vpn.hwlocal.net
-Port            22
-IdentityFile    ~/.ssh/id_rsa
-User            siegward
-
-Host            ssh-ca
-HostName        ssh-ca.servers.hwlocal.net
-Port            22
-IdentityFile    ~/.ssh/id_rsa
-User            root
-
-Host            pihole
-HostName        pihole.servers.hwlocal.net
-Port            22
-IdentityFile    ~/.ssh/id_rsa
-User            siegward
-
-Host            unifi
-HostName        unifi.admin.hwlocal.net
-Port            22
-IdentityFile    ~/.ssh/id_rsa
-User            siegward
-
-Host            octoprint
-HostName        octoprint.servers.hwlocal.net
-Port            22
-IdentityFile    ~/.ssh/id_rsa
-User            siegward
-
-Host            comma-2
-HostName        comma-2.untrust.hwlocal.net
-Port            22
-IdentityFile    ~/.ssh/id_ed25519
-User            root
-
-Host            hifi
-HostName        hifiberry.trust.hwlocal.net
-Port            22
-IdentityFile    ~/.ssh/id_rsa
-User            root
+Host trident
+    HostName        trident.trust.hwlocal.net
+    User            pi
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+Host firelink
+    HostName        firelink.servers.hwlocal.net
+    User            siegward
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+Host plex
+    HostName        plex.trust.hwlocal.net
+    User            siegward
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+Host pve
+    HostName        pve.admin.hwlocal.net
+    User            root
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+Host pve2
+    HostName        pve2.admin.hwlocal.net
+    User            root
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+Host pvetc
+    HostName        pvetc.admin.hwlocal.net
+    User            root
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+Host grandarchives
+    HostName        grandarchives.servers.hwlocal.net
+    User            siegward
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+Host searxng
+    HostName        searxng.servers.hwlocal.net
+    User            siegward
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+Host pihole
+    HostName        192.168.50.21
+    User            siegward
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+Host pihole2
+    HostName        192.168.50.22
+    User            siegward
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+Host hifi
+    HostName        hifi.trust.hwlocal.net
+    User            pi
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+Host minecraft
+    HostName        minecraft.servers.hwlocal.net
+    User            siegward
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+Host docker-untrust
+    HostName        docker-untrust.untrust.hwlocal.net
+    User            siegward
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+Host wireguard 
+    HostName        wireguard.servers.hwlocal.net
+    User            root
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+Host outpost
+    HostName        172.234.221.230
+    User            siegward
+    Port            4160
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+    KeepAlive       yes
+    ServerAliveInterval 30
+Host homeassistant 
+    HostName        home-assistant.servers.hwlocal.net
+    User            root
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+Host blocky 
+    HostName        blocky.servers.hwlocal.net
+    User            root
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+Host traefik 
+    HostName        traefik.servers.hwlocal.net
+    User            root
+    IdentityFile    ~/.ssh/id_ed25519
+Host arr-stack 
+    HostName        arr-stack.servers.hwlocal.net
+    User            alex
+    IdentityFile    ~/.ssh/id_ed25519
+Host sillytavern 
+    HostName        sillytavern.servers.hwlocal.net
+    User            root
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
