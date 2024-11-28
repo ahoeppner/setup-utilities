@@ -9,8 +9,8 @@ Host firelink
     IdentityFile    ~/.ssh/id_ed25519
     IdentitiesOnly  yes
 Host plex
-    HostName        plex.trust.hwlocal.net
-    User            siegward
+    HostName        plex.servers.hwlocal.net
+    User            root
     IdentityFile    ~/.ssh/id_ed25519
     IdentitiesOnly  yes
 Host pve
@@ -96,6 +96,41 @@ Host arr-stack
     IdentityFile    ~/.ssh/id_ed25519
 Host sillytavern 
     HostName        sillytavern.servers.hwlocal.net
+    User            root
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+Host fs 
+    HostName        fs.servers.hwlocal.net
+    User            root
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+Host actualbudget 
+    HostName        actualbudget.servers.hwlocal.net
+    User            root
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+Host vikunja 
+    HostName        vikunja.servers.hwlocal.net
+    User            root
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+Host bookstack 
+    HostName        bookstack.servers.hwlocal.net
+    User            root
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+Host paperless 
+    HostName        paperless.servers.hwlocal.net
+    User            root
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+Host ntfy 
+    HostName        ntfy.servers.hwlocal.net
+    User            root
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+Host n8n 
+    HostName        n8n.servers.hwlocal.net
     User            root
     IdentityFile    ~/.ssh/id_ed25519
     IdentitiesOnly  yes
