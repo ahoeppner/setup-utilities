@@ -13,16 +13,6 @@ Host plex
     User            root
     IdentityFile    ~/.ssh/id_ed25519
     IdentitiesOnly  yes
-Host pve
-    HostName        pve.admin.hwlocal.net
-    User            root
-    IdentityFile    ~/.ssh/id_ed25519
-    IdentitiesOnly  yes
-Host pve2
-    HostName        pve2.admin.hwlocal.net
-    User            root
-    IdentityFile    ~/.ssh/id_ed25519
-    IdentitiesOnly  yes
 Host pvetc
     HostName        pvetc.admin.hwlocal.net
     User            root
@@ -33,33 +23,8 @@ Host grandarchives
     User            siegward
     IdentityFile    ~/.ssh/id_ed25519
     IdentitiesOnly  yes
-Host searxng
-    HostName        searxng.servers.hwlocal.net
-    User            siegward
-    IdentityFile    ~/.ssh/id_ed25519
-    IdentitiesOnly  yes
-Host pihole
-    HostName        192.168.50.21
-    User            siegward
-    IdentityFile    ~/.ssh/id_ed25519
-    IdentitiesOnly  yes
-Host pihole2
-    HostName        192.168.50.22
-    User            siegward
-    IdentityFile    ~/.ssh/id_ed25519
-    IdentitiesOnly  yes
-Host hifi
-    HostName        hifi.trust.hwlocal.net
-    User            pi
-    IdentityFile    ~/.ssh/id_ed25519
-    IdentitiesOnly  yes
 Host minecraft
     HostName        minecraft.servers.hwlocal.net
-    User            siegward
-    IdentityFile    ~/.ssh/id_ed25519
-    IdentitiesOnly  yes
-Host docker-untrust
-    HostName        docker-untrust.untrust.hwlocal.net
     User            siegward
     IdentityFile    ~/.ssh/id_ed25519
     IdentitiesOnly  yes
@@ -131,6 +96,21 @@ Host ntfy
     IdentitiesOnly  yes
 Host n8n 
     HostName        n8n.servers.hwlocal.net
+    User            root
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+Host openwebui 
+    HostName        openwebui.servers.hwlocal.net
+    User            root
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+Host pfsense 
+    HostName        pfsense.admin.hwlocal.net
+    User            ahoeppner
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+Host tika 
+    HostName        tika.servers.hwlocal.net
     User            root
     IdentityFile    ~/.ssh/id_ed25519
     IdentitiesOnly  yes
