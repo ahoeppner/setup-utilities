@@ -1,5 +1,10 @@
+Host zero
+    HostName        spi-xi.devices.hwlocal.net
+    User            sovol
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
 Host trident
-    HostName        trident.trust.hwlocal.net
+    HostName        trident.devices.hwlocal.net
     User            pi
     IdentityFile    ~/.ssh/id_ed25519
     IdentitiesOnly  yes
@@ -14,7 +19,7 @@ Host plex
     IdentityFile    ~/.ssh/id_ed25519
     IdentitiesOnly  yes
 Host pvetc
-    HostName        pvetc.admin.hwlocal.net
+    HostName        pvetc.infra.hwlocal.net
     User            root
     IdentityFile    ~/.ssh/id_ed25519
     IdentitiesOnly  yes
@@ -104,13 +109,33 @@ Host openwebui
     User            root
     IdentityFile    ~/.ssh/id_ed25519
     IdentitiesOnly  yes
-Host pfsense 
-    HostName        pfsense.admin.hwlocal.net
-    User            ahoeppner
+Host dns1 
+    HostName        dns1.servers.hwlocal.net
+    User            root
     IdentityFile    ~/.ssh/id_ed25519
     IdentitiesOnly  yes
 Host tika 
-    HostName        tika.servers.hwlocal.net
+    HostName        apache-tika.servers.hwlocal.net
     User            root
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+Host metube 
+    HostName        metube.servers.hwlocal.net
+    User            root
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+Host homepage 
+    HostName        homepage.servers.hwlocal.net
+    User            root
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+Host convertx 
+    HostName        convertx.servers.hwlocal.net
+    User            root
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+Host rpi1 
+    HostName        rpi1.servers.hwlocal.net
+    User            alex
     IdentityFile    ~/.ssh/id_ed25519
     IdentitiesOnly  yes
