@@ -139,3 +139,9 @@ Host rpi1
     User            alex
     IdentityFile    ~/.ssh/id_ed25519
     IdentitiesOnly  yes
+
+Host srv-fedora-01 
+    HostName        192.168.50.8
+    User            alex
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
