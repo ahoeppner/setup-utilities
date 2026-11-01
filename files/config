@@ -62,6 +62,11 @@ Host tika
     User            root
     IdentityFile    ~/.ssh/id_ed25519
     IdentitiesOnly  yes
+Host jellyfin 
+    HostName        jellyfin.servers.hwlocal.net
+    User            root
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
 Host metube 
     HostName        metube.servers.hwlocal.net
     User            root
@@ -69,6 +74,22 @@ Host metube
     IdentitiesOnly  yes
 Host homepage 
     HostName        homepage.servers.hwlocal.net
+    User            root
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+Host hermes 
+    HostName        192.168.50.139
+    User            root
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+Host hindsight 
+    HostName        192.168.50.252
+    User            root
+    IdentityFile    ~/.ssh/id_ed25519
+    IdentitiesOnly  yes
+    SetEnv TERM=xterm-256color
+Host authelia 
+    HostName        192.168.50.204
     User            root
     IdentityFile    ~/.ssh/id_ed25519
     IdentitiesOnly  yes
